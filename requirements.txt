@@ -18,7 +18,6 @@ astunparse==1.6.3
 async-generator==1.10
 atomicwrites==1.4.0
 attrs==21.2.0
-autopep8==1.6.0
 Babel==2.9.1
 backcall==0.2.0
 backports.functools-lru-cache==1.6.4
@@ -224,7 +223,6 @@ py-postgresql==1.2.2
 pyarrow==6.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycodestyle==2.7.0
 pycosat==0.6.3
 pycparser==2.21
 pycurl==7.44.1
