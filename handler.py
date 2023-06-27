@@ -11,7 +11,7 @@ model = pickle.load(open('model/model_health_insurance.pkl','rb') )
 # Initialize API
 app = Flask(__name__)
 
-@app.route( '/healthinsurance/predict', methods=['POST'] )
+@app.route( 'https://teste-health-insurance-api.onrender.com/', methods=['POST'] )
 def Health_Insurance_Predict():
     test_json = request.get_json()
 
