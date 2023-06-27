@@ -49,7 +49,6 @@ click==8.0.3
 click-plugins==1.1.1
 cligj==0.7.2
 cloudpickle==2.0.0
-clyent==1.2.2
 colorama==0.4.4
 contextlib2==0.6.0.post1
 cookiecutter==1.7.2
