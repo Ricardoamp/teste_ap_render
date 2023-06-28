@@ -3,3 +3,4 @@ pandas==1.4.4
 Flask==1.1.2
 scikit-learn==1.0.2
 jinja2==2.11.3
+markupsafe==2.0.1
