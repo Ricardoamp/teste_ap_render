@@ -3,7 +3,6 @@ import pandas as pd
 from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
 import os
-from jinja2 import escape
 
 # loading model
 model = pickle.load(open('model/model_health_insurance.pkl','rb') )
