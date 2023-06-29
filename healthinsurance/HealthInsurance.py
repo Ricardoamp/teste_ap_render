@@ -60,7 +60,7 @@ class HealthInsurance():
         data['Vehicle_Damage_Yes'] = vehicle_damage_encoding['Vehicle_Damage_Yes']
         data['Vehicle_Damage_No'] = vehicle_damage_encoding['Vehicle_Damage_No']
 
-        cols_drop = ['Gender','Driving_License','Previously_Insured','Vehicle_Damage']
+        cols_drop = ['id','Gender','Driving_License','Previously_Insured','Vehicle_Damage']
         data = data.drop( cols_drop, axis=1 )
 
         return data
