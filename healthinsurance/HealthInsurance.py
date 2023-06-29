@@ -3,7 +3,7 @@ import pandas as pd
 import numpy  as np
 import json
 
-class HealthInsurance( ):
+class HealthInsurance():
     def __init__( self ):
         self.home_path = ''
         self.annualpremiums_scaler       = pickle.load( open( self.home_path + 'parameter/annual_premium_scaler.pkl', 'rb' ) )
