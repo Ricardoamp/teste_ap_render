@@ -27,37 +27,30 @@ class HealthInsurance():
         # Vintage
         data['Vintage'] = self.vintage_scaler.transform( data[['Vintage']].values )
 
-        # Gender - one hot encoding
-        gender_encoding = pd.get_dummies(data['Gender'], prefix = 'Gender')
-
-        # Driving License - one hot encoding
-        driving_license_encoding = pd.get_dummies(data['Driving_License'], prefix = 'Driving_License')
-
-        # Previously Insured - one hot encoding
-        previously_insured_encoding = pd.get_dummies(data['Previously_Insured'], prefix = 'Previously_Insured')
-
-        # Vehicle Age - ordinal
-        time_mapping = {'< 1 Year': 0, '1-2 Year': 1, '> 2 Years': 2}
-        data['Vehicle_Age'] = data['Vehicle_Age'].map(time_mapping)
-
-        # Vehicle_Damage
-        vehicle_damage_encoding = pd.get_dummies( data['Vehicle_Damage'], prefix = 'Vehicle_Damage' )
-
         # Gender
-        data['Gender_Female'] = gender_encoding['Gender_Female']
-        data['Gender_Male'] = gender_encoding['Gender_Male']
+        if 'Gender_Female' in gender_encoding:
+            data['Gender_Female'] = gender_encoding['Gender_Female']
+
+        if 'Gender_Male' in gender_encoding:
+            data['Gender_Male'] = gender_encoding['Gender_Male']
 
         # Driving License
-        data['Driving_License_0'] = driving_license_encoding['Driving_License_0']
-        data['Driving_License_1'] = driving_license_encoding['Driving_License_1']
+        if 'Driving_License_0' in driving_license_encoding:
+            data['Driving_License_0'] = driving_license_encoding['Driving_License_0']
+
+        if 'Driving_License_1' in driving_license_encoding:
+            data['Driving_License_1'] = driving_license_encoding['Driving_License_1']
 
         # Previously Insured
-        data['Previously_Insured_0'] = previously_insured_encoding['Previously_Insured_0']
-        data['Previously_Insured_1'] = previously_insured_encoding['Previously_Insured_1']
+        if 'Previously_Insured_0' in previously_insured_encoding:
+            data['Previously_Insured_0'] = previously_insured_encoding['Previously_Insured_0']
+
+        if 'Previously_Insured_1' in previously_insured_encoding:
+            data['Previously_Insured_1'] = previously_insured_encoding['Previously_Insured_1']
 
         # VehicleDamage
-        data['Vehicle_Damage_Yes'] = vehicle_damage_encoding['Vehicle_Damage_Yes']
-        data['Vehicle_Damage_No'] = vehicle_damage_encoding['Vehicle_Damage_No']
+        if 'Vehicle_Damage_Yes' in vehicle_damage_encoding:
+            data['Vehicle_Damage_Yes'] = vehicle_damage
 
         cols_drop = ['id','Gender','Driving_License','Previously_Insured','Vehicle_Damage']
         data = data.drop( cols_drop, axis=1 )
