@@ -27,7 +27,16 @@ class HealthInsurance():
         # Vintage
         data['Vintage'] = self.vintage_scaler.transform( data[['Vintage']].values )
 
-        
+
+        # One-hot encoding for 'Vehicle_Age'
+        vehicle_age_encoding = pd.get_dummies(data['Vehicle_Age'], prefix='Vehicle_Age')
+
+        # Append the encoded columns to the dataframe
+        data = pd.concat([data, vehicle_age_encoding], axis=1)
+
+        # Remove the original 'Vehicle_Age' column
+        data.drop('Vehicle_Age', axis=1, inplace=True)
+
 
         # Gender - one hot encoding
         gender_encoding = pd.get_dummies(data['Gender'], prefix='Gender')
