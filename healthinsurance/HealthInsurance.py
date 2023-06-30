@@ -30,6 +30,10 @@ class HealthInsurance():
         # Gender - one hot encoding
         gender_encoding = pd.get_dummies(data['Gender'], prefix='Gender')
 
+        # Driving License - one hot encoding
+        driving_license_encoding = pd.get_dummies(data['Driving_License'], prefix='Driving_License')
+
+
         # Gender
         if 'Gender_Female' in gender_encoding:
             data['Gender_Female'] = gender_encoding['Gender_Female']
