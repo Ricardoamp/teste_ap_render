@@ -27,6 +27,9 @@ class HealthInsurance():
         # Vintage
         data['Vintage'] = self.vintage_scaler.transform( data[['Vintage']].values )
 
+        # Gender - one hot encoding
+        gender_encoding = pd.get_dummies(data['Gender'], prefix='Gender')
+
         # Gender
         if 'Gender_Female' in gender_encoding:
             data['Gender_Female'] = gender_encoding['Gender_Female']
