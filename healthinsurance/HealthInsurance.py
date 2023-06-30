@@ -27,12 +27,19 @@ class HealthInsurance():
         # Vintage
         data['Vintage'] = self.vintage_scaler.transform( data[['Vintage']].values )
 
+        
+
         # Gender - one hot encoding
         gender_encoding = pd.get_dummies(data['Gender'], prefix='Gender')
 
         # Driving License - one hot encoding
         driving_license_encoding = pd.get_dummies(data['Driving_License'], prefix='Driving_License')
 
+        # Previously Insured - one hot encoding
+        previously_insured_encoding  = pd.get_dummies(data['Previously_Insured'], prefix='Previously_Insured')
+
+        # Previously Insured - one hot encoding
+        vehicle_damage_encoding  = pd.get_dummies(data['Vehicle_Damage'], prefix='Vehicle_Damage')
 
         # Gender
         if 'Gender_Female' in gender_encoding:
@@ -57,7 +64,10 @@ class HealthInsurance():
 
         # VehicleDamage
         if 'Vehicle_Damage_Yes' in vehicle_damage_encoding:
-            data['Vehicle_Damage_Yes'] = vehicle_damage
+            data['Vehicle_Damage_Yes'] = vehicle_damage_encoding['Vehicle_Damage_Yes']
+            
+        if 'Vehicle_Damage_No' in vehicle_damage_encoding:
+            data['Vehicle_Damage_No'] = vehicle_damage_encoding['Vehicle_Damage_No']
 
         cols_drop = ['id','Gender','Driving_License','Previously_Insured','Vehicle_Damage']
         data = data.drop( cols_drop, axis=1 )
