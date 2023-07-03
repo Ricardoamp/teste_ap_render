@@ -39,6 +39,9 @@ class HealthInsurance( object ):
         time_mapping_vda = {'No': 0, 'Yes': 1}
         data['Vehicle_Damage'] = data['Vehicle_Damage'].map(time_mapping_vda)
 
+        cols_drop = ['id']
+        data = data.drop(cols_drop, axis =1)
+
         return data
     
     def get_prediction(self, model, original_data, test_data):
