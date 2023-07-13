@@ -1,1 +1,1 @@
- <h1 align="center"> Health Insurance Cross Sell: Calculando a propensão de compras de clientes </h1>
+ <h1 align="center"> Calculando a propensão de compras de clientes </h1>
