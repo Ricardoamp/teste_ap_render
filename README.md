@@ -40,6 +40,7 @@ Vintage | Número de Dias, o Cliente foi associado à empresa
 Response | 1 : O cliente está interessado, 0 : O cliente não está interessado
 
 ## 4.0. Limpeza dos dados
+Para esse dataset específico, não foi necessário uma limpeza ou tratamento de valores vazios.
 
 ## 5.0. Exploração dos dados
 
