@@ -62,7 +62,13 @@ Vintage |	10.0 |	299.0 |	-289.0 |	154.272609 |	154.0 |	83.642252 |	0.004656 |	-1
 ### 5.2. Visualização dos dados 
 Utilizando gráficos e visualizações, é possível explorar as relações entre as variáveis e identificar tendências ou padrões. Histogramas, gráficos de dispersão, gráficos de linhas e box plots são algumas das ferramentas comumente utilizadas para essa análise visual.
 
+ <h1 align="center"> Variável numérica </h1>
+ 
+![](./img/analise_univariada.png)
 
+ <h1 align="center"> Variável categórica </h1>
+ 
+![](./img/analise_categorica.png)
 
 ## 6.0. Modelagem dos dados
 Na etapa de modelagem dos dados, o objetivo é preparar os dados de forma adequada para que os algoritmos de machine learning possam ser aplicados. Essa etapa envolve uma série de processos, como codificação de variáveis categóricas em variáveis numéricas, transformações de dados e separação dos dados em conjuntos de treinamento e teste.
@@ -76,6 +82,8 @@ Ao utilizar o Random Forest para projetos "Learn to Rank", o objetivo é criar u
 ## 8.0. Avaliação do Algoritmo
 Após o treinamento, desenvolvi um modelo capaz de identificar a quantidade de pessoas interessadas em adquirir o seguro e classificá-las por ordem de prioridade, conforme ilustrado na imagem abaixo:
 
+![](./img/random_forest.png)
+
 Através das previsões feitas pelo modelo, consigo identificar todas as pessoas que demonstraram interesse no seguro. Ao organizá-las em uma ordem específica, percebi que seria necessário entrar em contato com um pouco mais da metade da minha base de clientes para alcançar todos os possíveis interessados em efetuar a compra.
 
 Essa abordagem me permite otimizar os esforços de vendas, concentrando-me nos clientes com maior probabilidade de conversão, maximizando o retorno sobre os investimentos e garantindo que a equipe de vendas entre em contato com aqueles mais propensos a adquirir o seguro.
@@ -88,4 +96,15 @@ Para esse projeto específico, meu objetivo era disponibilizar meu modelo em uma
 Essa abordagem visava fornecer uma solução prática e acessível, permitindo que a equipe de vendas utilizasse facilmente a planilha para identificar os clientes com maior probabilidade de compra. Ao clicar no botão, o modelo seria acionado, processando as informações relevantes e fornecendo uma lista ordenada dos potenciais compradores.
 
 Com essa implementação, eu buscava aumentar a eficiência das operações de vendas, permitindo uma abordagem mais direcionada e personalizada para entrar em contato com os clientes em potencial. Dessa forma, seria possível otimizar os recursos da equipe de vendas, concentrando esforços naqueles com maior probabilidade de conversão, o que poderia resultar em melhores resultados e maior lucratividade para a empresa.
+
+Exemplo da previsão direto na planilha do google sheets
+
+# Passo 1 - planilha onde desejo fazer as previsões
+
+![](./img/passo1.png)
  
+# Passo 2 - botões para realizar a previsão
+![](./img/passo2.png)
+
+# Passo 3 - score
+![](./img/passo3.png)
