@@ -112,3 +112,7 @@ Exemplo da previsão direto na planilha do google sheets
 
 # Passo 3 - score
 ![](./img/passo3.png)
+
+
+
+Obervação: A api está com o modelo de Logistic Regression, pois o github não suportou o modelo de Random Forest.
