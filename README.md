@@ -1,4 +1,8 @@
- <h1 align="center"> Calculando a propensão de compras de clientes </h1>
+ <h1 align="center">
+  <img src="./img/cross-sell.png" alt="Descrição da Imagem">
+</h1>
+ 
+ <h1 align="center"> HEALTH INSURANCE CROSS SELL </h1>
  
 O principal objetivo desse projeto é direcionar os esforços de vendas da empresa para os clientes mais propensos a comprar um seguro, eliminando chamadas desnecessárias e melhorando a lucratividade geral. Para alcançar esse objetivo, o modelo foi treinado com dados coletados de clientes existentes que já possuem seguro de saúde, o que proporciona insights valiosos sobre o comportamento dos consumidores.
 
