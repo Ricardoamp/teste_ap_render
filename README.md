@@ -43,11 +43,49 @@ Response | 1 : O cliente está interessado, 0 : O cliente não está interessado
 Para esse dataset específico, não foi necessário uma limpeza ou tratamento de valores vazios.
 
 ## 5.0. Exploração dos dados
+Na etapa de exploração dos dados, o objetivo principal é obter um entendimento mais profundo do negócio por meio da análise dos dados disponíveis. Essa etapa envolve identificar padrões, relacionamentos e insights relevantes que possam ajudar a compreender melhor o comportamento dos dados e a tomar decisões embasadas. A seguir, são apresentadas algumas etapas comuns durante a exploração dos dados:
+
+### 5.1 Análise Descritiva
+Uma análise descritiva das variáveis disponíveis, como a média, mediana, desvio padrão, valores mínimos e máximos. Essa análise fornece uma visão geral do intervalo de valores, identificando possíveis discrepâncias ou anomalias nos dados.
+
+attributes |	min |	max	| range	| mean	| median	| std	| skew	| kurtosis
+---------- | --- | --- | ----- | ---- | ------ | --- | ---- | --------
+Age	| 20.0	| 85.0	| -65.0	| 38.835582 |	36.0 |	15.509496 |	0.670000 |	-0.570016
+Driving_License |	0.0 |	1.0 |	-1.0 |	0.997829 |	1.0 |	0.046547 |	-21.390677 |	455.564047
+Region_Code |	0.0 |	52.0 |	-52.0 |	26.413340 |	28.0 |	13.217997 |	-0.117479 |	-0.863585
+Previously_Insured |	0.0 |	1.0 |	-1.0 |	0.458373 |	0.0 |	0.498264 |	0.167088 |	-1.972094
+Annual_Premium |	2630.0 |	540165.0 |	-537535.0 |	30571.851319 |	31675.0 |	17254.215590 |	1.853769 |	36.695689
+Policy_Sales_Channel |	1.0 |	163.0 |	-162.0 |	111.966591 |	131.0 |	54.229980 |	-0.897379 |	-0.976093
+Vintage |	10.0 |	299.0 |	-289.0 |	154.272609 |	154.0 |	83.642252 |	0.004656 |	-1.199888
+
+
+### 5.2. Visualização dos dados 
+Utilizando gráficos e visualizações, é possível explorar as relações entre as variáveis e identificar tendências ou padrões. Histogramas, gráficos de dispersão, gráficos de linhas e box plots são algumas das ferramentas comumente utilizadas para essa análise visual.
+
+
 
 ## 6.0. Modelagem dos dados
+Na etapa de modelagem dos dados, o objetivo é preparar os dados de forma adequada para que os algoritmos de machine learning possam ser aplicados. Essa etapa envolve uma série de processos, como codificação de variáveis categóricas em variáveis numéricas, transformações de dados e separação dos dados em conjuntos de treinamento e teste.
 
-## 7.0. Algoritmos de Machine Learning
+## 7.0. Algoritmo de Machine Learning (Random Forest)
+
+O algoritmo Random Forest é uma escolha interessante para projetos "Learn to Rank" devido à sua capacidade de lidar com tarefas de classificação e seu desempenho robusto em conjunto com a natureza do aprendizado de ranking.
+
+Ao utilizar o Random Forest para projetos "Learn to Rank", o objetivo é criar um modelo que possa classificar e ordenar uma lista de itens de acordo com sua relevância para um determinado critério.
 
 ## 8.0. Avaliação do Algoritmo
+Após o treinamento, desenvolvi um modelo capaz de identificar a quantidade de pessoas interessadas em adquirir o seguro e classificá-las por ordem de prioridade, conforme ilustrado na imagem abaixo:
+
+Através das previsões feitas pelo modelo, consigo identificar todas as pessoas que demonstraram interesse no seguro. Ao organizá-las em uma ordem específica, percebi que seria necessário entrar em contato com um pouco mais da metade da minha base de clientes para alcançar todos os possíveis interessados em efetuar a compra.
+
+Essa abordagem me permite otimizar os esforços de vendas, concentrando-me nos clientes com maior probabilidade de conversão, maximizando o retorno sobre os investimentos e garantindo que a equipe de vendas entre em contato com aqueles mais propensos a adquirir o seguro.
+
+Com essa estratégia, tenho como objetivo alcançar uma eficiência maior nas ações de vendas, direcionando recursos e tempo de forma mais eficaz, o que contribui para a melhoria da lucratividade e do desempenho geral da empresa.
 
 ## 9.0. Modelo em produção
+Para esse projeto específico, meu objetivo era disponibilizar meu modelo em uma API online, e por meio de uma planilha do Google Sheets, permitir que, ao clicar em um botão, as informações com as colunas adequadas fossem usadas para fazer previsões e criar um ranking dos clientes mais propensos a adquirir o seguro.
+
+Essa abordagem visava fornecer uma solução prática e acessível, permitindo que a equipe de vendas utilizasse facilmente a planilha para identificar os clientes com maior probabilidade de compra. Ao clicar no botão, o modelo seria acionado, processando as informações relevantes e fornecendo uma lista ordenada dos potenciais compradores.
+
+Com essa implementação, eu buscava aumentar a eficiência das operações de vendas, permitindo uma abordagem mais direcionada e personalizada para entrar em contato com os clientes em potencial. Dessa forma, seria possível otimizar os recursos da equipe de vendas, concentrando esforços naqueles com maior probabilidade de conversão, o que poderia resultar em melhores resultados e maior lucratividade para a empresa.
+ 
